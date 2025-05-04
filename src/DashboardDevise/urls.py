@@ -14,8 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.template.defaultfilters import title
 from django.urls import path
 
+from devise.views import dashboard
+
 urlpatterns = [
+    path("", dashboard, name="DashBoard"),
     path('admin/', admin.site.urls),
 ]
