@@ -20,6 +20,6 @@ from django.urls import path
 from devise.views import dashboard
 
 urlpatterns = [
-    path("", dashboard, name="DashBoard"),
+    path("days=<int:days_range>&currencies=<str:currencies>", dashboard, name="DashBoard"),
     path('admin/', admin.site.urls),
 ]
